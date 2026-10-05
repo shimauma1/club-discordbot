@@ -1,0 +1,22 @@
+[Unit]
+Description=Discord tournament verification bot
+Wants=network-online.target
+After=network-online.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=shimauma
+WorkingDirectory=/home/shimauma/mydata/discordbot/tournament-verification
+ExecStart=/home/shimauma/mydata/discordbot/tournament-verification/.venv/bin/python /home/shimauma/mydata/discordbot/tournament-verification/bot.py
+Restart=on-failure
+RestartSec=15
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/shimauma/mydata/discordbot/tournament-verification/data
+
+[Install]
+WantedBy=multi-user.target

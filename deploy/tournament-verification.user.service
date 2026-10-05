@@ -1,0 +1,15 @@
+[Unit]
+Description=Discord tournament verification bot
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+WorkingDirectory=/home/shimauma/mydata/discordbot/tournament-verification
+ExecStart=/home/shimauma/mydata/discordbot/tournament-verification/.venv/bin/python /home/shimauma/mydata/discordbot/tournament-verification/bot.py
+Restart=on-failure
+RestartSec=15
+UMask=0077
+NoNewPrivileges=true
+
+[Install]
+WantedBy=default.target

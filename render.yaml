@@ -1,0 +1,23 @@
+services:
+  - type: worker
+    name: tournament-discordbot
+    runtime: docker
+    plan: starter
+    numInstances: 1
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: GUILD_ID
+        sync: false
+      - key: INTRO_CHANNEL_ID
+        sync: false
+      - key: WELCOME_CHANNEL_ID
+        sync: false
+      - key: PARTICIPANT_ROLE_ID
+        sync: false
+      - key: DATABASE_PATH
+        value: /app/data/bot.sqlite3
+    disk:
+      name: introductions
+      mountPath: /app/data
+      sizeGB: 1
