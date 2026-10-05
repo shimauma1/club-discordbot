@@ -129,13 +129,13 @@ docker compose logs --tail 50
 
 ## 4. GitHubへの保存とNAS運用
 
-このBotフォルダを独立したGitリポジトリとして管理します。親の `mydata` リポジトリとは別です。GitHubへの送信先は接続後に設定します。
+このBotフォルダを独立したGitリポジトリとして管理します。親の `mydata` リポジトリとは別です。GitHub保存先は [shimauma1/club-discordbot](https://github.com/shimauma1/club-discordbot)（公開リポジトリ）です。
 
 BotはNASのユーザーサービスで常時起動しています。GitHubに送信しても稼働先は変わらず、コード更新も自動反映されません。NASの電源・インターネット接続が必要です。
 
 `.env`、`data/`（参加者の記録）、`.venv/` はGit管理外です。トークンはNASの `.env` に保持します。GitHubはコードのバックアップであり、DBのバックアップにはなりません。
 
-GitHubへ接続した後は、Botフォルダで変更を確認し、必要なファイルだけを記録して送信します。
+Botフォルダで変更を確認し、必要なファイルだけを記録して送信します。
 
 ```bash
 cd /home/shimauma/mydata/discordbot/tournament-verification

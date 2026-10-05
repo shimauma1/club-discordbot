@@ -8,5 +8,5 @@
 - Discordへの接続、ボタン設置、自己紹介から認証・チャンネル閲覧までユーザー確認済み。
 - NASのユーザーサービス `tournament-verification.service` で稼働。自動起動とLinger有効。
 - ユーザーの希望により稼働先はNASを維持。外部ホスティングは使用しない。
-- GitHub送信向けに独立リポジトリを準備。GitHubアカウント接続と送信先設定は未完了。
+- 独立Gitリポジトリから `https://github.com/shimauma1/club-discordbot` のmainへ初回送信完了。ユーザー指定の保存先は公開リポジトリ。
 - トークン、DB、仮想環境をGitから除外。
